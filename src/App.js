@@ -57,12 +57,13 @@ function App() {
                     </section>
                 )}
             </main>
+
             <footer className="footer">
                 <p>&copy; {new Date().getFullYear()} || Created By: Pegwende P Zabsore </p>
                 <p>Acknowledgment: Rafi Zabsore</p>
                 <nav className="footer-nav">
-                    <a href="https://www.facebook.com/aristide.zabsore" target="_blank" className="footer-link">Facebook</a>
-                    <a href="#" target="_blank" className="footer-link">Instagram</a>
+                    <a href="https://www.facebook.com/aristide.zabsore" target="_blank" rel="noreferrer" className="footer-link">Facebook</a>
+                    <a href="https://www.instagram.com/aristidezabsore" target="_blank" rel="noreferrer" className="footer-link">Instagram</a>
                     <a href="/contact" className="footer-link">Contact</a>
                 </nav>
             </footer>
