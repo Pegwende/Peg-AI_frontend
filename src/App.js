@@ -10,7 +10,7 @@ function App() {
         setLoading(true);
         setAnswer(""); // Clear previous answer while loading
         try {
-            const response = await fetch(`http://localhost:8081/peggpt?question=${encodeURIComponent(question)}`);
+            const response = await fetch(`https://peg-aibackend-production.up.railway.app/peggpt?question=${encodeURIComponent(question)}`);
             const data = await response.json();
             setAnswer(data.answer);
         } catch (error) {
@@ -19,10 +19,16 @@ function App() {
         setLoading(false);
     };
 
+    const handleFocus = () => {
+        // Clear the input text when the user clicks into the search box
+        if (question === "") return;
+        setQuestion(""); 
+    };
+
     return (
         <div className="workgpt-container">
             <header className="header">
-                <h1>Peg-AI</h1>
+                <h1>Bible-AI</h1>
                 <p>Get <b>Bible</b>-related answers instantly!</p>
             </header>
             <main className="main-content">
@@ -35,8 +41,9 @@ function App() {
                         type="text"
                         value={question}
                         onChange={(e) => setQuestion(e.target.value)}
-                        placeholder="Ask Peg-AI..."
+                        placeholder="Ask Bible-AI..."
                         className="question-input"
+                        onFocus={handleFocus}
                     />
                     <button onClick={askGPT} className="ask-button" disabled={loading}>
                         {loading ? "Thinking..." : "Ask"}
@@ -52,7 +59,7 @@ function App() {
             </main>
             <footer className="footer">
                 <p>&copy; {new Date().getFullYear()} || Created By: Pegwende P Zabsore </p>
-                <p>Acknowlegment: Rafi Zabsore</p>
+                <p>Acknowledgment: Rafi Zabsore</p>
                 <nav className="footer-nav">
                     <a href="https://www.facebook.com/aristide.zabsore" target="_blank" className="footer-link">Facebook</a>
                     <a href="#" target="_blank" className="footer-link">Instagram</a>
