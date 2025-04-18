@@ -29,7 +29,7 @@ function App() {
         <div className="workgpt-container">
             <header className="header">
                 <h1>Bible-AI</h1>
-                <p>Get <b>Bible</b>-related answers instantly!</p>
+                <p>Get instant answers to your <b>Bible</b>-related questions!</p>
             </header>
             <main className="main-content">
                 <section className="evangelism-message">
@@ -60,7 +60,7 @@ function App() {
 
             <footer className="footer">
                 <p>&copy; {new Date().getFullYear()} || Created By: Pegwende P Zabsore </p>
-                <p>Acknowledgment: Rafi Zabsore</p>
+                <p>Acknowledgment: Rafi Zabsore, Kady Zerbo.</p>
                 <nav className="footer-nav">
                     <a href="https://www.facebook.com/aristide.zabsore" target="_blank" rel="noreferrer" className="footer-link">Facebook</a>
                     <a href="https://www.instagram.com/aristidezabsore" target="_blank" rel="noreferrer" className="footer-link">Instagram</a>
